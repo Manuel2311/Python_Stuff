@@ -15,7 +15,7 @@ def process_data(processors,data):
         yield process(item)
 
 def main():
-    with open("data_person_1000000.csv","r") as file:
+    with open("Data/data_person_1000000.csv","r") as file:
         people_strings=file.read().splitlines()
 
         Person=namedtuple("Person",people_strings[0])
@@ -29,8 +29,7 @@ def main():
         people.append(Person(*process_data(processors,string.split(","))))
 
 
-    pprint(people[20:25])
+    return people
 
-
-
-main()
+if __name__ == "__main__":
+    main()
