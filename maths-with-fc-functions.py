@@ -11,7 +11,7 @@ def create_adder(value):
 
     return adder
 
-
+#The number between the brackets is the value
 process_func=create_adder(10)
 #This gives the function a specification
 
